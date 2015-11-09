@@ -1,6 +1,10 @@
 import DS from 'ember-data';
 import config from '../config/environment';
 
+export default DS.LSAdapter.extend({
+	namespace: 'twitter-clone';
+});
+/*
 export default DS.RESTAdapter.extend(DS.BuildURLMixin, {
 	headers: {
 		oauth_consumer_key: config.APP.oauth_consumer_key,
@@ -23,3 +27,6 @@ export default DS.RESTAdapter.extend(DS.BuildURLMixin, {
 		return this.ajax(this.buildUrl(), 'GET');
 	}
 });
+*/
+
+
