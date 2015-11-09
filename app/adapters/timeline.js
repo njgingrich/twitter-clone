@@ -1,11 +1,12 @@
 import DS from 'ember-data';
+import config from '../config/environment';
 
 export default DS.RESTAdapter.extend(DS.BuildURLMixin, {
-	authentication: {
-	    oauth_consumer_key: "",
-	    oauth_token: "",
-	    oauth_signature_method: "HMAC-SHA1",
-	    oauth_version: "1.0",
+	headers: {
+		oauth_consumer_key: config.APP.oauth_consumer_key,
+	    oauth_token: config.APP.oauth_token,
+	    oauth_signature_method: config.APP.oauth_signature_method,
+	    oauth_version: config.APP.oauth_version
 	},
 	buildUrl: function(type, id, record) {
 		return 'https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=njgingrich'; 
