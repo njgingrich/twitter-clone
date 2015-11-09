@@ -2,7 +2,7 @@ import DS from 'ember-data';
 import config from '../config/environment';
 
 export default DS.LSAdapter.extend({
-	namespace: 'twitter-clone';
+	namespace: 'twitter-clone'
 });
 /*
 export default DS.RESTAdapter.extend(DS.BuildURLMixin, {

@@ -1,5 +1,6 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-	tweets: DS.hasMany('tweet'),
+	user: DS.belongsTo('timeline'),
+ 	text: DS.attr('string') 
 });
