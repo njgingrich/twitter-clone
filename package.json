@@ -38,5 +38,9 @@
     "ember-export-application-global": "^1.0.3",
     "ember-localstorage-adapter": "0.5.5",
     "ember-simple-auth": "^1.0.1"
+  },
+  "dependencies": {
+    "broccoli-sass": "^0.6.8",
+    "broccoli-static-compiler": "^0.2.2"
   }
 }

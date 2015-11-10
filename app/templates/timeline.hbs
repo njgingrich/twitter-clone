@@ -1,4 +1,12 @@
-<strong>text: {{model.text}}</strong>
-<br>
-<strong>date: {{model.created_at}}</strong>
-HELLO EVERYONE
+<div class="container">
+    <div>
+        {{textarea cols="80" rows="3" placeholder="Tweet something" value=input}}
+        <button class="btn btn-default" {{action "submitTweet"}}>Post tweet</button>
+    </div>
+
+    <div>
+        {{#each model.tweets as |tweet|}}
+            {{single-tweet text=tweet.text id=tweet.id action='deleteTweet'}}
+        {{/each}}
+    </div>
+</div>
